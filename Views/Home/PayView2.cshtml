@@ -1,0 +1,8 @@
+﻿@using DevExpress.AspNetCore
+@{
+}
+@{
+
+    var report = ViewBag.ReporteHijo;
+}
+@Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(report)

@@ -1,0 +1,18 @@
+﻿@using DevExpress.AspNetCore;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+@{
+
+    var report = ViewBag.ReporteHijo;
+}
+@Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(report)
